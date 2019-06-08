@@ -17,7 +17,7 @@ $.each(
     tatta_points,
     function(i, v) {
         var row_html = "<tr><td>"
-                + i.toString()
+                + (i+1).toString()
                 + "</td><td>"
                 + v.properties.name.toString()
                 + "</td></tr>";
