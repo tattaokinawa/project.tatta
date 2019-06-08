@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>Tatta Points</title>
-        
+
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
         <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js" integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og==" crossorigin=""></script>
 
@@ -11,111 +11,197 @@
 
 <div id="mapid" style="width: 500px; height: 600px;"></div>
 <script>
-var tatta_points = [{
-  "type": "FeatureCollection",
-  "features": [
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [24.341281, 124.157277]
-      },
-      "properties": {
-        "name": "石垣ゆいロード店"
-      }
+var tatta_points = [
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [24.341281, 124.157277]
     },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [24.338887,124.157456]
-      },
-      "properties": {
-        "name": "石垣７３０記念碑前店"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [24.342501, 124.154708]
-      },
-      "properties": {
-        "name": "石垣市役所前店"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [24.342113,124.151043]
-      },
-      "properties": {
-        "name": "石垣浜崎二丁目店"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [24.334996,124.160023]
-      },
-      "properties": {
-        "name": "石垣サザンゲートブリッジ店"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [24.337336,124.165832]
-      },
-      "properties": {
-        "name": "石垣登野城仲道店"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [24.342216, 124.16642]
-      },
-      "properties": {
-        "name": "石垣八重高前店"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [24.348878, 124.164624]
-      },
-      "properties": {
-        "name": "石垣シード店"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [24.349653, 124.145644]
-      },
-      "properties": {
-        "name": "石垣新栄店"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [24.333199, 124.16712]
-      },
-      "properties": {
-        "name": "石垣八島店"
-      }
+    "properties": {
+      "name": "石垣ゆいロード店"
     }
-  ]
-}
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [24.338887,124.157456]
+    },
+    "properties": {
+      "name": "石垣７３０記念碑前店"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [24.342501, 124.154708]
+    },
+    "properties": {
+      "name": "石垣市役所前店"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [24.342113,124.151043]
+    },
+    "properties": {
+      "name": "石垣浜崎二丁目店"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [24.334996,124.160023]
+    },
+    "properties": {
+      "name": "石垣サザンゲートブリッジ店"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [24.337336,124.165832]
+    },
+    "properties": {
+      "name": "石垣登野城仲道店"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [24.342216, 124.16642]
+    },
+    "properties": {
+      "name": "石垣八重高前店"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [24.348878, 124.164624]
+    },
+    "properties": {
+      "name": "石垣シード店"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [24.349653, 124.145644]
+    },
+    "properties": {
+      "name": "石垣新栄店"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [24.333199, 124.16712]
+    },
+    "properties": {
+      "name": "石垣八島店"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [446965.929, 87610.93]
+    },
+    "properties": {
+      "name": "石垣新川シード店"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [446965.929, 87610.93]
+    },
+    "properties": {
+      "name": "石垣中央運動公園前店"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [446965.929, 87610.93]
+    },
+    "properties": {
+      "name": "石垣平得店"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [446965.929, 87610.93]
+    },
+    "properties": {
+      "name": "石垣真喜良店"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [446965.929, 87610.93]
+    },
+    "properties": {
+      "name": "石垣真栄里バイパス店"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [446965.929, 87610.93]
+    },
+    "properties": {
+      "name": "石垣県立八重山病院店"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [446965.929, 87610.93]
+    },
+    "properties": {
+      "name": "石垣八重山支庁前店"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [446965.929, 87610.93]
+    },
+    "properties": {
+      "name": "石垣大浜南店"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [446965.929, 87610.93]
+    },
+    "properties": {
+      "name": "石垣磯辺店"
+    }
+  }
 ];
 
 var mymap = L.map('mapid').setView([24.45, 124.2], 11);
