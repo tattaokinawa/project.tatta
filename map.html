@@ -11,6 +11,18 @@
 
 <div id="mapid" style="width: 500px; height: 600px;"></div>
 <script>
+var tatta_points = [{
+    "type": "Feature",
+    "properties": {
+        "name": "Family Mart",
+        "show_on_map": true
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [124.1649, 24.3372]
+    }
+}];
+
 var mymap = L.map('mapid').setView([24.45, 124.2], 11);
 
 	L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
@@ -20,6 +32,8 @@ var mymap = L.map('mapid').setView([24.45, 124.2], 11);
 			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
 		id: 'mapbox.streets'
 	}).addTo(mymap);
+
+L.geoJSON(tatta_points, {}).addTo(mymap);
 
 </script>
 
