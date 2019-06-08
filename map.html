@@ -12,16 +12,111 @@
 <div id="mapid" style="width: 500px; height: 600px;"></div>
 <script>
 var tatta_points = [{
-    "type": "Feature",
-    "properties": {
-        "name": "Family Mart",
-        "show_on_map": true
-    },
-    "geometry": {
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates": [124.1649, 24.3372]
+        "coordinates": [24.341281, 124.157277]
+      },
+      "properties": {
+        "name": "石垣ゆいロード店"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.338887,124.157456]
+      },
+      "properties": {
+        "name": "石垣７３０記念碑前店"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.342501, 124.154708]
+      },
+      "properties": {
+        "name": "石垣市役所前店"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.342113,124.151043]
+      },
+      "properties": {
+        "name": "石垣浜崎二丁目店"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.334996,124.160023]
+      },
+      "properties": {
+        "name": "石垣サザンゲートブリッジ店"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.337336,124.165832]
+      },
+      "properties": {
+        "name": "石垣登野城仲道店"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.342216, 124.16642]
+      },
+      "properties": {
+        "name": "石垣八重高前店"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.348878, 124.164624]
+      },
+      "properties": {
+        "name": "石垣シード店"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.349653, 124.145644]
+      },
+      "properties": {
+        "name": "石垣新栄店"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.333199, 124.16712]
+      },
+      "properties": {
+        "name": "石垣八島店"
+      }
     }
-}];
+  ]
+}
+];
 
 var mymap = L.map('mapid').setView([24.45, 124.2], 11);
 
