@@ -10,3 +10,17 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 }).addTo(mymap);
 
 L.geoJSON(tatta_points, {}).addTo(mymap);
+
+$("#tatta_points_table").append("<table><tbody></tbody></table>");
+
+$.each(
+    tatta_points,
+    function(i, v) {
+        var row_html = "<tr><td>"
+                + i.toString()
+                + "</td><td>"
+                + v.properties.name.toString()
+                + "</td></tr>";
+        $("#tatta_points_table tbody").append(row_html);
+    }
+);
